@@ -1,0 +1,42 @@
+{% extends 'core/base.html' %}
+{% load static %}
+
+{% block title %}
+    <title>{% if persona %}{{ persona.nombres }} {{ persona.apellidos }}{% else %}Acerca de mi{% endif %}</title>
+{% endblock %}
+
+{% block background %}{% static 'core/img/about-bg.jpg' %}{% endblock %}
+
+{% block headers %}
+    <h1>Acerca de</h1>
+    <span class="subheading">Biografía</span>
+{% endblock %}
+
+{% block content %}
+    <!-- Contenido Principal -->
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-3 col-md-4 offset-lg-1">
+          <img class="img-fluid avatar" src="{% static 'core/img/avatar.jpg' %}" alt="">
+        </div>
+        <div class="col-lg-7 col-md-8">
+          {% if persona %}
+            <h2 class="section-heading">{{ persona.nombres }} {{ persona.apellidos }}</h2>
+            <p><strong>Título:</strong> {{ persona.titulo_academico }}</p>
+            <p><strong>Dedicación:</strong> {{ persona.dedicacion }}</p>
+            <p><strong>Dirección:</strong> {{ persona.direccion }}</p>
+            <p><strong>Teléfono:</strong> {{ persona.telefono }}</p>
+            <p><strong>Correo:</strong> {{ persona.correo_electronico }}</p>
+            <hr>
+            <h3>Biografía</h3>
+            <p>{{ persona.biografia }}</p>
+          {% else %}
+            <h2 class="section-heading">Información no disponible</h2>
+            <p>Aún no se ha registrado la información personal en el panel de administración.</p>
+          {% endif %}
+        </div>
+      </div>
+    </div>
+
+    <hr>
+{% endblock %}
