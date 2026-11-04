@@ -1,0 +1,40 @@
+[
+{
+  "model": "core.persona",
+  "pk": 2,
+  "fields": {
+    "nombres": "Marcelo Andrés",
+    "apellidos": "Guamán Quijije",
+    "direccion": "Cdla. La Paz",
+    "telefono": "0992974370",
+    "titulo_academico": "Bachiller en Ciencias",
+    "biografia": "Estudiante de 4to Semestre de Sistemas de Información. Nacido en Manta, el 3 de mayo del 2006",
+    "correo_electronico": "mguaman8066@utm.edu.ec",
+    "dedicacion": "Deportista y Estudiante"
+  }
+},
+{
+  "model": "core.project",
+  "pk": 1,
+  "fields": {
+    "title": "Primer Proyecto",
+    "description": "Proyecto de un Sistema explicado en Instagram",
+    "image": "",
+    "link": "https://instagram.com",
+    "created": "2026-11-04T04:30:36.803Z",
+    "updated": "2026-11-04T04:33:15.764Z"
+  }
+},
+{
+  "model": "core.project",
+  "pk": 2,
+  "fields": {
+    "title": "Segundo Proyecto",
+    "description": "Tarea investigativa de Usuarios",
+    "image": "",
+    "link": "https://google.com",
+    "created": "2026-11-04T04:34:24.522Z",
+    "updated": "2026-11-04T04:34:24.522Z"
+  }
+}
+]
